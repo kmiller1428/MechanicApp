@@ -72,7 +72,8 @@ namespace MechanicApp
         // saves all the information needed for a full invoice to the invoice.txt file
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            StreamWriter writer = new StreamWriter(FileManager.Append("Invoice.txt"));
+            FileManager.append = true;
+            StreamWriter writer = new StreamWriter(FileManager.Open("Invoice.txt"));
 
             
 

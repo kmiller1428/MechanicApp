@@ -27,8 +27,10 @@ namespace MechanicApp
         //saves new customer information to the customer file 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            StreamWriter writer = new StreamWriter(FileManager.Append("Customer.txt"));
+            FileManager.append = true;
+            StreamWriter writer = new StreamWriter(FileManager.Open("Customer.txt"));
 
+           
 
 
             writer.WriteLine(txtbName.Text + "; "+ txtbPhone.Text+"; "+ txtbAddress.Text + ";");

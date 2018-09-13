@@ -11,10 +11,11 @@ namespace MechanicApp
     {
         static String CustFilePath = @"C:\Users\Kevin\Documents\Visual Studio 2015\Projects\MechanicApp\MechanicApp\Customer.txt";
         static String InvFilePath = @"C:\Users\Kevin\Documents\Visual Studio 2015\Projects\MechanicApp\MechanicApp\Invoice.txt";
-
+        public static bool append = false;
         //opens file for reading and writing 
         public static FileStream Open(String FileName)
         {
+            
             String FilePath = "";
             if (FileName == "Customer.txt") {
                 FilePath = CustFilePath;
@@ -23,31 +24,19 @@ namespace MechanicApp
             {
                 FilePath = InvFilePath;
             }
-            FileStream inFile = new FileStream(FilePath, FileMode.Open, FileAccess.ReadWrite);
-         
-            return inFile;
+            if (!append)
+            {
+                FileStream inFile = new FileStream(FilePath, FileMode.Open, FileAccess.ReadWrite);
+                return inFile;
+            }
+            else
+            {
+                FileStream inFile = new FileStream(FilePath, FileMode.Append, FileAccess.Write);
+                return inFile;
+            }
+            
         }
 
-        // allows to append the text files. 
-        //Honestly, this is bad code
-        // I have two functions that essentially do the same thing 
-        //One is used to open the other is used to append
-        //will need to fix at some point but for now it works. 
-        public static FileStream Append(String FileName)
-        {
-            String FilePath = "";
-            if (FileName == "Customer.txt")
-            {
-                FilePath = CustFilePath;
-            }
-            if (FileName == "Invoice.txt")
-            {
-                FilePath = InvFilePath;
-            }
-            FileStream inFile = new FileStream(FilePath, FileMode.Append, FileAccess.Write);
-
-            return inFile;
-        }
 
     }
 }
