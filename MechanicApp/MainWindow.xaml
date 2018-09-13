@@ -1,0 +1,29 @@
+﻿<Window x:Class="MechanicApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MechanicApp"
+        mc:Ignorable="d"
+        Title="MechanicApp" Height="377" Width="591" Background="Gray">
+    <Grid>
+        <TextBox x:Name="txtbHours" HorizontalAlignment="Left" Height="23" Margin="315,46,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.467,-1.739"/>
+        <Label x:Name="lblHours" Content="Hours:" HorizontalAlignment="Left" Margin="315,15,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,-0.231"/>
+        <TextBox x:Name="txtbParts" HorizontalAlignment="Left" Height="23" Margin="315,106,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblParts" Content="Price of Parts:" HorizontalAlignment="Left" Margin="315,75,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtbTotal" HorizontalAlignment="Left" Height="23" Margin="315,165,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblTotal" Content="Total:" HorizontalAlignment="Left" Margin="315,134,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.462,2.192"/>
+        <Button x:Name="btnCalc" Content="Calc Total" HorizontalAlignment="Left" Margin="315,202,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.12,0.5" Click="btnCalc_Click"/>
+        <TextBox x:Name="txtbCust" HorizontalAlignment="Left" Height="87" Margin="34,188,0,0" TextWrapping="Wrap" Text="No customer selected" VerticalAlignment="Top" Width="217" RenderTransformOrigin="0.479,1.264"/>
+        <Label x:Name="lblCust" Content="Customer Info: " HorizontalAlignment="Left" Margin="34,157,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnSearchCust" Content="Search Customer" HorizontalAlignment="Left" Margin="34,81,0,0" VerticalAlignment="Top" Width="113" Click="btnSearchCust_Click"/>
+        <Button x:Name="btnAddCust" Content="Add new" HorizontalAlignment="Left" Margin="34,105,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.48,1.75" Click="btnAddCust_Click"/>
+        <TextBox x:Name="txtbPhone" HorizontalAlignment="Left" Height="22" Margin="34,46,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="177"/>
+        <Label x:Name="lblSearch" Content="Search by phone number: " HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnSave" Content="Save Invoice" HorizontalAlignment="Left" Margin="395,202,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.48,-0.15" Click="btnSave_Click"/>
+        <TextBox x:Name="txtbUpcharge" HorizontalAlignment="Left" Height="23" Margin="451,106,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblUpcharge" Content="Parts Upcharge:" HorizontalAlignment="Left" Margin="451,75,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.842,0.423"/>
+        <TextBox x:Name="txtbRate" HorizontalAlignment="Left" Height="23" Margin="451,45,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblRate" Content="Rate:" HorizontalAlignment="Left" Margin="451,15,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
